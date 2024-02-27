@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template, jsonify
 import numpy as np
+import time
 
 app = Flask(__name__)
 
@@ -32,6 +33,7 @@ def find_longest_sequences(numbers):
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
+    start_time = time.time() # Фіксуємо час початку обробки
     file = request.files['file']
     if file:
         # Перетворення файлу в список чисел
@@ -44,13 +46,16 @@ def upload_file():
         increasing_seq, decreasing_seq = find_longest_sequences(numbers)
         # Для опціональних завдань потрібно буде реалізувати додаткову логіку
         
+        processing_time = time.time() - start_time  # Обчислення часу обробки
+        
         return jsonify({
             'max': max_val,
             'min': min_val,
             'median': median_val,
             'mean': mean_val,
             'longest_increasing_sequence': [int(x) for x in increasing_seq],  # Конвертація кожного елемента до int
-            'longest_decreasing_sequence': [int(x) for x in decreasing_seq]  # Конвертація кожного елемента до int
+            'longest_decreasing_sequence': [int(x) for x in decreasing_seq],  # Конвертація кожного елемента до int
+            'processing_time': processing_time # Додавання часу обробки до відповіді
         })
 
 if __name__ == '__main__':
