@@ -32,9 +32,9 @@
 3. Після вибору файлу натисніть кнопку "Завантажити", щоб відправити файл на сервер для обробки.
 4. Дочекайтеся, поки сервер обробить файл. Під час обробки на екрані з'явиться анімація завантаження ().
 
-![image](https://github.com/Friendly-Neighborhood/large_number_analysis/assets/68468538/1847145e-131f-4ba0-b94a-e9ef495051ee)
-
+![image](https://github.com/Friendly-Neighborhood/large_number_analysis/assets/68468538/7cee9734-8b97-4e63-902c-22b1af2b3785)
 
 5. Після завершення обробки на сторінці з'являться результати: максимум, мінімум, медіана, середнє значення, найбільша зростаюча послідовність та найбільша спадаюча послідовність чисел.
 
-![image](https://github.com/Friendly-Neighborhood/large_number_analysis/assets/68468538/266fbafd-1ef5-4ae5-a2a5-740c9028b882)
+![image](https://github.com/Friendly-Neighborhood/large_number_analysis/assets/68468538/d0be369f-04c4-4b30-8870-37eb58fe6c6c)
+
